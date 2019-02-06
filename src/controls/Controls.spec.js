@@ -17,9 +17,9 @@ describe('The Controls component', () => {
     it('Buttons text changes to reflect the state the door will be in if clicked', () => {
         const { getByText } = render(<Dashboard />);
 
-        const closedGate = getByText(/close gate/i);
-        fireEvent.click(closedGate);
-        expect(closedGate).toHaveTextContent(/open gate/i);
+        const closeGate = getByText(/close gate/i);
+        fireEvent.click(closeGate);
+        expect(closeGate).toHaveTextContent(/open gate/i);
 
         const lockGate = getByText(/lock gate/i);
         fireEvent.click(lockGate);
